@@ -1,0 +1,39 @@
+# 报错(使用注意点, cdn方式请跳过)
+  原因：内置组件采用JSX写法
+```shell
+    error  in ./node_modules/pl-table/package/src/virtual-table-header-render.js
+    Module parse failed: Unexpected token (64:8)
+    You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+    |   if (isGroup) this.$parent.isGroup = true;
+    |   return (
+    >         <table
+    |     class="el-table__header"
+    |       cellspacing="0"
+```
+
+# 解决上诉问题（cdn方式请跳过）
+   **如果你使用的是vue-cli 2.x  配置如下**
+
+   第一步:
+   npm install babel-plugin-transform-vue-jsx babel-plugin-syntax-jsx --save-dev
+
+   ![image](https://github.com/livelyPeng/pl-table/blob/master/assets/method2.png)
+
+   第二步: （前提是必须安装了 babel-loader）
+
+   ![image](https://github.com/livelyPeng/pl-table/blob/master/assets/method.png)
+
+
+   **如果你使用的是vue-cli 3.x  配置如下**
+
+   第一步:
+
+   npm install @vue/babel-preset-jsx @vue/babel-helper-vue-jsx-merge-props --save-dev
+
+   第二步:
+
+   ![image](https://github.com/livelyPeng/pl-table/blob/master/assets/vue3method3.png)
+
+   第三步:
+
+   ![image](https://github.com/livelyPeng/pl-table/blob/master/assets/vue3method2.png)
