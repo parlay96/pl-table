@@ -1,23 +1,17 @@
-# pl-table  当前版本: "version": "2.5.6"
+# pl-table  当前版本: "version": "2.5.7"
 > 最新: 全新升级X + Y轴同时虚拟的诞生！请看底部的 plx-table-grid表格的API及实例文件
 
-> 一个表格插件（完美解决万级数据渲染卡顿问题），过万数据点击全选卡顿，等等问题
+> 重点: 一个表格插件（完美解决万级数据渲染卡顿问题），过万数据点击全选卡顿，等等问题
 
 > 重点： pl-table基于element-ui，在此感谢element-ui全体作者
 
-> 重点:   流畅渲染万级数据并不会影响到 element-ui el-table组件的(原有)功能，并且新增了一些功能，具体请看属性配置
+> 重点:  流畅渲染万级数据并不会影响到 element-ui el-table组件的(原有)功能，并且新增了一些功能，具体请看属性配置
 
-> 重点:  你的项目不是elementUi库在开发，而且用的其它UI库，或者没有用UI库，plTable一样可以用哦
-
-> 注: pl-table 2.4.6起是个全新的版本，无需安装element，不在兼容element低版本（相当于pl-table指定了element版本），不需要element的包，请看文档，和下面的实例文件了解全新版本！
-
-> 注: 当前pl-table是element的2.12.0的表格api， 但是并不是代表你需要安装element 2.12.0， 上面说到了，不需要你安装，你只需要知道表格对应的是element的2.12.0的api  你自己还是可以去安装element其他版本，并且去使用ele其他组件。 pl-table现在跟element没关系了，一定要看底部下面的pl-table APi
+> 注:  关于项目中使用pl-table打包后文件体积大，如何优化问题，请加下面群了解！
 
 > 注: 看表格实例效果代码去看element Table 表格效果代码（比如你不知道怎么合并列，合计,多级表头，怎么写请你去看element表格），唯一不同的就是把el-table组件名改成pl-table, el-table-column改成pl-table-column, 然后对照pltable api进行开发吧!!
 
-> 注： 2.3.6 需要配置（需要配置的实例，请看底部）   2.4.6及以上不需要配置，目前来说这2.3.6和2.4.6及以上的版本是稳定版本
-
-> author: pengLei （如有问题请加入pl-table交流群吧： 675286117）欢迎Star
+> author: pl （更多问题请加入pl-table交流群吧： 675286117）感谢点击上方的Star！！！
 
 > 扫码加群： ![image](https://livelypeng.github.io/pl-table/assets/plTableCode.png)
 
@@ -44,7 +38,7 @@
   });
 
   // 注意：如果你不想在入口文件注入, 而是想在单个某个文件页面引入，你可以这样写哦
-  import { PlTable, PlTableColumn } from 'pl-table';
+  import { PlTable, PlTableColumn, PlxTableGrid, PlxTableColumn } from 'pl-table';
   export default {
     components: {
       PlTable,
@@ -69,13 +63,7 @@
 
 
 # 用前须知
-   **如果你使用 use-virtual（渲染大数据）请看下面， 当然如果你不用use-virtual属性（可以跳过须知），因为它就不存在下面的情况啦**
-
    1. 使用use-virtual渲染大数据属性: 暂不支持树形数据与懒加载与展开行
-
-   2. 请看如下图
-   ![image](https://livelypeng.github.io/pl-table/assets/tishi.png)
-
 
 # pl-table表格的API
  **2.4.6及以上版本api**
@@ -94,7 +82,7 @@
 
 
 # 更新日志
-**2.5.6**
+**2.5.7**
 1.修改2.5.4bug
 
 **2.5.4**
