@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!--引入表格样式-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pl-table@2.5.7/themes/index.css">
+  <!--&lt;!&ndash;默认表格样式很丑 引入这个样式就可以好看啦&ndash;&gt;-->
+  <!--<link rel="stylesheet" href="https://unpkg.com/pl-table/themes/plTableStyle.css">-->
+  <title>pl-table在线预览</title>
+</head>
+<body>
+<!-- 使用 useVirtual 属性开启虚拟滚动 使用虚拟滚动时，必须要固定表格高度和行高 -->
+<!-- 1. 使用格式外层必须包含一层父级元素，且必须设置高度 2. this.$refs.plTable.setHeight() // 当窗口高度变化或者外层高度变化，就调用该方法 -->
+<div style="height: 100%;width: 100%" id="plTable">
+  <div style="height: 400px;width: 100%">
+    <!--<pl-table :datas="tableData" height="400" useVirtual
+    注意点： 表格插件并不需要height属性字段(跟ele不同)，因为涉及分页组件。里面会去计算高度，只需要父级外层设置高度即可
+    row-height属性很重要 请看表格属性列表
+    -->
+    <pl-table :datas="tableData"
+              ref="plTable"
+              big-data-checkbox
+              fixed-columns-roll
+              header-drag-style
+              show-summary
+              :total-option="[{ label: '地址' }]"
+              use-virtual
+              :row-height="50">
+      <!--show-overflow-tooltip属性代表超出则内容部分给出提示框-->
+      <pl-table-column
+        v-for="item in columns"
+        :key="item.id"
+        :resizable="item.resizable"
+        :show-overflow-tooltip="item.showOverflowTooltip"
+        :prop="item.prop"
+        :label="item.label"
+        :fixed="item.fixed"
+        :width="item.width"/>
+    </pl-table>
+  </div>
+  <div style="height: 500px;width: 100%">
+    <!--<pl-table :datas="tableData" height="400" useVirtual
+    注意点： 表格插件并不需要height属性字段(跟ele不同)，因为涉及分页组件。里面会去计算高度，只需要父级外层设置高度即可
+    row-height属性很重要 请看表格属性列表
+    -->
+    <plx-table-grid :datas="tableData"  ref="plTable2">
+      <plx-table-column
+        v-for="item in columns2"
+        :key="item.id"
+        :resizable="item.resizable"
+        :prop="item.prop"
+        :label="item.label"
+        :fixed="item.fixed"
+        :width="item.width">
+      </plx-table-column>
+    </plx-table-grid>
+  </div>
+</div>
+<!-- import Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pl-table@2.5.7/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#plTable',
+    data: function() {
+      return {
+        columns: [
+          {prop: 'date', label: '日期', width: 120},
+          {prop: 'address', label: '地址', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '噜噜噜', width: 230, showOverflowTooltip: true},
+          {prop: 'address', label: '娃哈哈', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '地址', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '挖挖掘机挖掘机挖掘机掘机', width: 100},
+          {prop: 'address', label: '娃哈哈', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '娃哈哈', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '噜噜噜', width: 230, showOverflowTooltip: true},
+          {prop: 'address', label: '娃哈哈', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '地址', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '挖挖掘机挖掘机挖掘机掘机', width: 100},
+          {prop: 'address', label: '娃哈哈', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '娃哈哈', width: 100, showOverflowTooltip: true},
+          {prop: 'address', label: '噜噜噜', width: 230, showOverflowTooltip: true},
+          {prop: 'address', label: '娃哈哈', width: 100, showOverflowTooltip: true}
+        ],
+        columns2: Array.from({ length: 1000 }, (_, idx) => ({
+          prop: 'address', label: '地址' + idx, width: 200, showOverflow: true, sortable: true, fixed: ''
+        })),
+        tableData:Array.from({ length: 10000 }, (_, idx) => ({
+          idx: idx + 1,
+          date: '2016-05-03',
+          name: '王小虎',
+          ab: '欢迎使用pl-table',
+          address: '上海市普陀区金沙江路 1516 弄'
+        }))
+      }
+    }
+  })
+</script>
+</body>
+</html>

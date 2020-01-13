@@ -1,0 +1,64 @@
+{
+  "name": "pl-table",
+  "description": "一个表格插件（完美解决万级数据渲染卡顿问题）",
+  "version": "2.5.8",
+  "author": "penglei",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "lib",
+    "package",
+    "src",
+    "themes"
+  ],
+  "main": "lib/pl-table.common.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "lint": "eslint --ext .js,.vue src",
+    "reinstall": "npm i --no-optional --registry=https://registry.npm.taobao.org"
+  },
+  "dependencies": {
+    "plxy-grid": "^2.8.1",
+    "xe-utils": "2.3.0",
+    "deepmerge": "^1.2.0",
+    "normalize-wheel": "^1.0.1",
+    "resize-observer-polyfill": "^1.5.0",
+    "throttle-debounce": "^1.0.1",
+    "vuedraggable": "^2.20.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "eslint": "^5.4.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "file-loader": "^1.1.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-config-elemefe": "0.1.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/livelyPeng/pl-table"
+  }
+}
