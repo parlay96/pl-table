@@ -7,7 +7,9 @@ import './assets/styles/hightlight.scss'
 import 'pl-table/themes/index.css'
 import 'pl-table/themes/plTableStyle.css'
 import plTable from 'pl-table'
+import Icon from '../package/icon'
 Vue.use(plTable)
+Vue.use(Icon)
 Vue.component(demoCard.name, demoCard)
 
 
