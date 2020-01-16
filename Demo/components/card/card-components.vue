@@ -15,7 +15,9 @@
                 完美解决万级数据渲染卡顿问题
             </div>
             <div class="card-group-item-content-more">
-                更多
+                <router-link :to="`/components/virtual`">
+                  更多
+                </router-link>
                 <f-icon color="white" name="right"></f-icon>
             </div>
         </div>

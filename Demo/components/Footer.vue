@@ -3,18 +3,19 @@
     <div class="firm-footer-link">
       <div class="firm-footer-link-to">
         <span>前往</span>
-        <span>
-          <router-link :to="`/`">
-            首页
-          </router-link>
+        <span @click="toTop">
+           首页
         </span>
         <span>
           <router-link :to="`/components/install`">
             安装
           </router-link>
         </span>
-        <span>开始使用</span>
-        <span>github</span>
+        <span>
+          <a target="_blank" href="https://github.com/livelyPeng/pl-table">
+            github
+          </a>
+        </span>
       </div>
       <div class="firm-footer-link-dependence">
         <span>官网依赖</span>
@@ -25,18 +26,15 @@
       </div>
       <div class="firm-footer-link-about">
         <span>关于</span>
-        <span> <a target="_blank" href="https://github.com/livelyPeng/pl-table">github</a></span>
-        <span> <a target="_blank" href="https://github.com/juliangarnier/anime">联系邮箱</a></span>
-        <span> <a target="_blank" href="https://github.com/markedjs/marked">API设计</a></span>
+        <span> <a target="_blank" href="https://camo.githubusercontent.com/fc79243386477e968eb9194aba3e6d070954be4c/68747470733a2f2f6c6976656c7970656e672e6769746875622e696f2f706c2d7461626c652f6173736574732f706c5461626c65436f64652e706e67">联系qq</a></span>
       </div>
       <div class="firm-footer-link-more">
         <span>更多</span>
         <span class="nav-react">
-                    <f-icon style="margin-right: 10px" font-size="30px" name="Vue"></f-icon>
-                    Vue UI组件库</span>
-        <!--                <span class="nav-svg">-->
-        <!--                    <f-icon color="#cccccc" style="margin-right: 10px" font-size="30px" name="svg"></f-icon>-->
-        <!--                    SVG</span>-->
+             <f-icon style="margin-right: 10px" font-size="30px" name="Vue">
+             </f-icon>
+                    Vue UI组件库
+        </span>
       </div>
     </div>
   </div>
@@ -45,7 +43,12 @@
 <script>
   export default {
     name: "Footer",
-    methods: {}
+    methods: {
+      toTop() {
+        window.scrollTo(0, 0)
+        document.querySelector('#app').scrollTop = 0
+      }
+    }
   }
 </script>
 
