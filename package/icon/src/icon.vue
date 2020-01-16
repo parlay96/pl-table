@@ -5,8 +5,8 @@
 </template>
 
 <script>
-    import '../../../../src/svg.js'
-    import {isString,isNumber} from "../../../../src/utils/type-of"
+    import '../../../src/svg'
+    import {isString,isNumber} from "../../../src/utils/type-of"
 
     export default {
         name: "f-icon",
