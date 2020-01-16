@@ -3,7 +3,7 @@
   <!-- 1. 使用格式外层必须包含一层父级元素，且必须设置高度 2. this.$refs.plTable.setHeight() // 当窗口高度变化或者外层高度变化，就调用该方法 -->
   <div style="height: 100%;width: 100%;overflow: auto">
     <div style="color:red;">pl-table在线预览，更多玩法请看文档哦，欢迎Star</div>
-    <span slot="footer" class="dialog-footer">
+      <span slot="footer" class="dialog-footer">
           <el-button @click="clearSelection">清除选中</el-button>
           <el-button @click="setData(2)">变化数据为2条</el-button>
           <el-button @click="setData(1000)">变化数据为1000条</el-button>
