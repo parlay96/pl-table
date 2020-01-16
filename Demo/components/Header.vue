@@ -2,7 +2,7 @@
     <div class="header" :class="{other:!atHome,'components-page':!atHome}">
         <div class="header-brand">
             <router-link :to="'/'">
-                <f-icon :color="fColor" font-size="30" name="F"></f-icon>
+                <f-icon :color="fColor" font-size="30" name="pl"></f-icon>
             </router-link>
         </div>
         <div class="header-nav">
@@ -16,7 +16,8 @@
         <div :class="{'header-angle':atHome}">
             <f-icon :color="fColor"
                     font-size="35px"
-                    :class="atHome?'header-angle-icon-home':'header-angle-icon-other'" name="github1"></f-icon>
+                    :class="atHome?'header-angle-icon-home':'header-angle-icon-other'" name="github1">
+            </f-icon>
         </div>
     </div>
 </template>

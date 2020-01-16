@@ -38,7 +38,7 @@ export default [
                 component: (resolve) => require(['../view/components/start'], resolve)
             },
             {
-                path: '/components/Button',
+                path: '/components/virtual',
                 name: 'button',
                 meta: {
                     name: '虚拟滚动',

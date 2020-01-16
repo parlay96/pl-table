@@ -8,8 +8,10 @@ import 'pl-table/themes/index.css'
 import 'pl-table/themes/plTableStyle.css'
 import plTable from 'pl-table'
 import Icon from '../package/icon'
+import Button from '../package/button'
 Vue.use(plTable)
 Vue.use(Icon)
+Vue.use(Button)
 Vue.component(demoCard.name, demoCard)
 
 

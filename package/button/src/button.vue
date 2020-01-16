@@ -164,7 +164,7 @@
     }
 </script>
 <style lang="scss" scoped>
-    @import "../../../../src/global";
+    @import "../../../src/global";
 
     @keyframes loop {
         to {
