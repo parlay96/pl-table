@@ -71,7 +71,7 @@
 # 用前须知
    1. 使用use-virtual渲染大数据属性: 暂不支持树形数据与懒加载与展开行
    2. plx-table-grid同时虚拟不支持合并行|列，不支持多级头，非必要不推荐使用x+y同时虚拟
-   3. pl-table x轴虚拟可以支持微小的合并|列，支持多级头
+   3. pl-table x轴虚拟可以支持微小的合并行|列 如2列 2行，支持多级头
 
 # pl-table表格的API
   https://github.com/livelyPeng/pl-table/wiki/pl-table-api
