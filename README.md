@@ -63,6 +63,8 @@
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
   <script src="https://unpkg.com/pl-table/lib/index.js"></script>
+  // 真实项目不建议你直接引入  <script src="https://unpkg.com/pl-table/lib/index.js"></script>这样去引如会直接下最新版本，如果你的项目打包发布了，然后遇见pl-table大更新 你可能项目会报错。
+  推荐你这样引入： https://unpkg.com/pl-table@2.7.4/lib/index.js   加入版本号！
 ```
 
 
