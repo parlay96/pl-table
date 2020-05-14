@@ -1,0 +1,78 @@
+.plTableBox .plTbaleTotal .el-table__footer-two {
+  border-top: 1px solid #c7c9cc;
+}
+.plTableBox .el-table th.is-leaf {
+  border-bottom: none !important;
+}
+.plTableBox .el-table__body {
+  background-color: transparent !important;
+}
+.plTableBox .el-table__fixed-right-patch {
+  top: 0px;
+  border-bottom: none;
+}
+.plTableBox .el-table__footer-wrapper td {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.plTableBox .el-table__fixed-footer-wrapper tbody td {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.plTableBox .el-table__fixed::before,
+.plTableBox .el-table__fixed-right::before {
+  background-color: transparent !important;
+}
+.plTableBox .el-table__header-wrapper {
+  background: #f7f7f7;
+}
+/*隐藏固定列的td边框线*/
+.plTableBox .el-table__fixed-right .el-table__row td:last-child {
+  border-right: none;
+}
+
+.plTableBox .el-table__expand-icon > .el-icon {
+  margin-left: -7px;
+  margin-top: -3px;
+  top: 32%;
+}
+.plTableBox .el-table__footer-wrapper {
+  background-color: #f5f7fa !important;
+}
+.plTableBox .el-table th {
+  background: #f7f7f7;
+}
+.plTableBox .el-table--border th.gutter:last-of-type {
+  border: none !important;
+}
+.plTableBox .el-table--group::after,
+.plTableBox .el-table--border::after {
+  width: 0 !important;
+}
+.plTableBox .el-table::before {
+  height: 0 !important;
+}
+.plTableBox .el-table--group,
+.plTableBox .el-table--border {
+  border: none !important;
+}
+.plTableBox .el-table__fixed-right-patch {
+  background-color: transparent !important;
+}
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+  background-color: rgba(255, 255, 255, 0);/*其他样式，比如圆角等*/
+}
+.singleTable ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgba(144, 147, 153, 0.5);
+}
+/*修改ele固定列样式， 对固定列阴影修改*/
+.plTableBox .el-table__fixed {
+box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+}
+.plTableBox .el-table__fixed-right {
+box-shadow: -6px 0 6px rgba(0, 0, 0, 0.1);
+}

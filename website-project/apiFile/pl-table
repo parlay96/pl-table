@@ -1,0 +1,164 @@
+**注意: pl-table当前对应的element-ui的文档是 2.13.0， 更多配置具体请看element官方文档的table属性/事件/方法，因为有些属性/事件/方法很少用，所以没加入到plTable, 新加功能凡是有看不懂的，请加群吧**
+
+# Table Attributes（表格属性）
+
+属性  |  说明  |  类型  |  默认值
+:----------: | -------  |  :-------:  |  :-------:
+data  |  表格数据(注意：大数据不建议使用双向绑定的 data 属性（vue 监听会大数据会短暂的卡顿），建议使用 reloadData 函数,请看表格方法)  |  array  |  -
+height | 表格高度（不给高度，或者高度为0，那么就是自适应；不给height或者不给maxheight，虚拟滚动直接会关闭）。 如果你数据多而且高度为0或者为空，那么就会卡死 | String, Number | -
+max-height | Table 的最大高度。合法的值为数字 （不给height或者不给maxHeight，虚拟滚动直接会关闭）。| string/number	| —
+record-table-select  | 是否记录表格的选项id(必须保证行ID存在，且唯一) 默认为false （用于我表格每页选中项进行保存，切换分页，不会导致之前页勾选的选项消失）注意：只有每页不超过1000条数据，才有效。  |  boolean  |  false
+border  |  是否显示纵向边框  |  boolean  |  true
+size | Table 的尺寸 / 可选值 medium / small / mini | String | -
+show-summary | 是否需要合计 |  boolean  | false
+show-header	| 是否显示表头 |	boolean	|	true
+current-row-key |	当前行的 key，只写属性	| String,Number	 | --
+default-expand-all | 是否默认展开所有行，当 Table 包含展开行存在或者为树形表格时有效 | Boolean	|	false
+highlight-current-row | 是否要高亮当前行 |  boolean  | true
+stripe | 是否为斑马纹 | boolean | false
+fit	| 列的宽度是否自撑开 |	boolean	|	true
+tree-props | 渲染嵌套数据的配置选项	| Object	|	{ hasChildren: 'hasChildren', children: 'children' }
+select-on-indeterminate	| 在多选表格中，当仅有部分行被选中时，点击表头的多选框时的行为。若为 true，则选中所有行；若为 false，则取消选择所有行 |	Boolean	|	true
+sum-text | 合计行第一列的文本 |	String | "合计"2字
+row-key | 行数据的 Key，用来优化 Table 的渲染；在使用 reserve-selection 功能与显示树形数据时，该属性是必填的。(注意 use-virtual开启时，无效), | String | -
+header-drag-style |  是否修改表格的头部拖动样式 | Boolean | false
+use-virtual | 是否开启虚拟滚动 (解决大数据渲染卡顿问题) | Boolean | false
+row-height |  use-virtual未开启的情况可以不需要，行高(必须要设置行高，如css给td给了80高度，那么你就给row-height给80，不要乱给高度，以td tr高度为准，否则会导致表格计算不正确) | Number | 60
+excess-rows |	可视区域上方和下方额外渲染的行数，行数越多表格接替渲染效果越好，但越耗性能	| Number | 3
+span-method | 合并行或列的计算方法 | Function | —
+tooltip-effect | tooltip effect 属性 / 可选值： dark/light | String | dark
+tooltip-placement | Tooltip 的出现位置 (注意：此属性必须开useVirtual才生效， 不开启useVirtual，就是默认为top,不可配置) / 可选值: 自己查看element的Tooltip组件的placement属性 | String | top
+total-option | 需要合计的选项（需要开启showSummary：true） （注意：当写了自定义合计方法（summary-method），此属性不在生效） |   totalOption格式如下 = [{ label: '金额', // 需要合计的表头名 unit: '元' // 合计出来的单位名 }] | []
+summary-method | 自定义的合计计算方法，（注意：当写了自定义合计方法，total-option属性不在生效） | Function({ columns, data })	| —
+addfence | 是否需要在表格尾部添加一行计算表格围栏。（比如你觉得合计一行不够，你还需要求平均值，或者其他）默认为帮你求平均值 | 如果你要自定义 请看fenceMethod属性 | Boolean | false
+fence-method | 自定义新添加计算围栏的计算方法（类似自定义合计算方法一样）| Function({ columns, data }) | -
+big-data-checkbox | 大量数据时候（至少数据量大于3000条每页），表格存在selection选择列表时，是否开启解决全选卡顿（缓慢）问题，开启此项可能影响table-column的selectable属性功能，最好不要使用selectable | Boolean | false
+row-class-name | 行的 className 的回调方法，也可以使用字符串为所有行设置一个固定的 className | Function({row, rowIndex})/String | -
+row-style | 行的 style 的回调方法 | Function({row, rowIndex})/Object | -
+cell-class-name | 行单元格的 className 的回调方法，也可以使用字符串为所有单元格设置一个固定的 className | Function({row, column, rowIndex, columnIndex})/String | -
+cell-style | 行单元格的 style 的回调方法，也可以使用一个固定的 Object 为所有单元格设置一样的 Style。 | Function({row, column, rowIndex, columnIndex})/Object | -
+header-row-class-name | 表头行的 className 的回调方法，也可以使用字符串为所有表头行设置一个固定的 className | Function({row, rowIndex})/String | -
+header-row-style | 表头行的 style 的回调方法，也可以使用一个固定的 Object 为所有表头行设置一样的 Style。| Function({row, rowIndex})/Object | —
+header-cell-class-name | 表头单元格的 className 的回调方法，也可以使用字符串为所有表头单元格设置一个固定的 className。	| Function({row, column, rowIndex, columnIndex})/String | —
+header-cell-style | 表头单元格的 style 的回调方法，也可以使用一个固定的 Object 为所有表头单元格设置一样的 Style。 |	Function({row, column, rowIndex, columnIndex})/Object |	—
+thtd-beyond-hiding | 开启头部th, 表体td超出隐藏  注意: 此属性必须是在use-virtual开启情况下才有效| Boolean | true
+default-sort | 默认的排序列的 prop 和顺序。它的prop属性指定默认的排序的列，order指定默认排序的顺序 | Object | order: ascending, descending	如果只指定了prop, 没有指定order, 则默认顺序是ascending
+empty-text | 空数据时显示的文本内容,也可以通过 slot="empty" 设置 | String	| 暂无数据
+fixed-columns-roll | 表格有固定列,同时表格有合计,同时表格有横向滚动条，会导致固定列部分的横向滚动条不可拖动，是否需要解决此问题 | Boolean | false
+
+# Table Events（表格的事件）
+
+事件名  |  说明  |  参数
+:----------: | -------  |  :-------:
+@table-select-change | 整个表格Checkbox选中的row的id数组, 必须保证row（表格的行数据）存在id且唯一，没有ID可以自己造 （不懂问作者）  注意 : 1. 当@select或者@select-all事件触发，就会触发这个事件 （可以用来回显表格勾选状态） 2. 参数为 tableSelectData 当前表格（含分页）选中项id数组  4. 该事件触发方式 需要设置表格属性  record-table-select：true// 具体看表格属性 | tableSelectData
+@select-all	| 当用户手动勾选全选 Checkbox 时触发的事件 | selection
+@select  | 当用户手动勾选数据行的 Checkbox 时触发的事件 |	selection, row
+@selection-change | 当选择项发生变化时会触发该事件 | selection
+@load-complete  | 当表格加载完成的事件回调 (当高度变化，数据变化，都会重新去计算表格，重新绘画表格，所以需要有些情况，想知道表格加载情况) |  plTable实例对象
+@row-dblclick | 当某一行被双击时会触发该事件 | row, column, event
+@cell-mouse-enter | 当单元格 hover 进入时会触发该事件 | row, column, cell, event
+@cell-mouse-leave | 当单元格 hover 退出时会触发该事件 |	row, column, cell, event
+@cell-click	| 当某个单元格被点击时会触发该事件	| row, column, cell, event
+@cell-dblclick	| 当某个单元格被双击击时会触发该事件 | row, column, cell, event
+@row-contextmenu	| 当某一行被鼠标右键点击时会触发该事件 | row, column, event
+@header-click | 当某一列的表头被点击时会触发该事件 | column, event
+@header-contextmenu	| 当某一列的表头被鼠标右键点击时触发该事件 | column, event
+@current-change	| 当表格的当前行发生变化的时候会触发该事件，如果要高亮当前行，请打开表格的 highlight-current-row 属性 |	currentRow, oldCurrentRow
+@expand-change	| 当用户对某一行展开或者关闭的时候会触发该事件 |	row, expandedRows
+@row-click  | 当某一行被点击时会触发该事件  | row, column, event
+@header-dragend  | 当拖动表头改变了列的宽度的时候会触发该事件  | newWidth, oldWidth, column, event
+@table-body-scroll | 当表体滚动时触发，无论横向还是竖向 |  {scrollTop， scrollLeft, table}, event
+@sort-change | 当表格的排序条件发生变化的时候会触发该事件 | { column, prop, order }
+@filter-change | 当表格的筛选条件发生变化的时候会触发该事件，参数的值是一个对象，对象的 key 是 column 的 columnKey，对应的 value 为用户选择的筛选条件的数组。 | filters
+
+
+# Table Methods（表格的方法）
+
+方法名  |  说明  |  参数
+:----------: | -------  |  :-------:
+toggleAllSelection  |  用于多选表格，切换所有行的选中状态  |  -
+clearSelection |  用于表格多选，清空用户的选择 | -
+toggleRowSelection | 用于表格多选，切换某一行的选中状态 | rows 数据格式: [{  row: row 行, selected: true 或者 false 如果使用了第二个参数(可以不使用)，则是设置这一行选中与否（selected 为 true 则选中）}]
+toggleRowExpansion | 用于可展开表格与树形表格，切换某一行的展开状态，如果使用了第二个参数，则是设置这一行展开与否（expanded 为 true 则展开） | row, expanded
+setCurrentRow | 用于单选表格，设定某一行为选中行，如果调用时不加参数，则会取消目前高亮行的选中状态。 | row
+pagingScrollTopLeft | 让表格滚动条回到顶部和左侧。 | 参数top,left，距离顶部或左侧距离 默认为0
+doLayout | 对 Table 进行重新布局。当 Table 或其祖先元素由隐藏切换为显示时，可能需要调用此方法 | --
+clearSort | 用于清空排序条件，数据会恢复成未排序的状态 | --
+clearFilter | 不传入参数时用于清空所有过滤条件，数据会恢复成未过滤的状态，也可传入由columnKey组成的数组以清除指定列的过滤条件 | columnKey
+sort | 手动对 Table 进行排序。参数prop属性指定排序列，order指定排序顺序。| 	prop: string, order: string
+reloadData | 绑定表格数据方法 | data表格数据 实例： this.$refs.plTable.reloadData(我就是表格数据啦)
+scrollBottom | 表格滚动到底部 | -
+
+# Table-column Attributes
+  **有关于pl-table-column更多配置具体请看element官方文档的table-column属性**
+
+属性  |  说明  |  类型  |  默认值
+:----------: | -------  |  :-------:  |  :-------:
+border-line | 是否显示头部列的右边框线(前提是开启了header-drag-style属性) | boolean | true
+show-overflow-tooltip | 当内容过长被隐藏时显示 tooltip（文字提示框） | Boolean | false
+resizable | 对应列是否可以通过拖动改变宽度（需要在 el-table 上设置 border 属性为真） | boolean | true
+align | 对齐方式 / 可选值：left/center/right  | String | left
+header-align | 表头对齐方式，若不设置该项，则使用表格的对齐方式 / 可选值： left/center/right | String | —
+
+
+# Table分页属性（是ele的分页组件，用法请看实例文件）使用分页组件然后动态计算高度需要注意的问题请看下面最底部描述
+
+属性  |  说明  |  类型  |  默认值
+:----------: | -------  |  :-------:  |  :-------:
+pagination-show | 是否显示分页组件 | boolean | false
+total | 总条目数 | number | -
+pager-count | 页码按钮的数量，当总页数超过该值时会折叠 | number | 5
+page-size | 每页显示条目个数  | Number | 10
+current-page | 当前页数 | Number | 1
+page-sizes	每页显示个数选择器的选项设置 |	number[] | [10, 20, 30, 50]
+layout | 组件布局，子组件名用逗号分隔 |	String	| total, sizes, prev, pager, next, jumper
+
+
+# Table分页事件
+
+事件名  |  说明  |  参数
+:----------: | -------  |  :-------:
+@handlePageSize  | 分页变化，条数变化 | { size: 条数 page: 页 }
+
+
+# 强调一点 以下这个操作显示字段不是表格列，不属于表格，它是一个侧滑弹框, 详细图片展示如下：
+
+  ![image](https://livelypeng.github.io/pl-table/website-project/assets/field.png)
+
+# Field Attributes（操作（显示字段）属性）
+
+属性  |  说明  |  类型  |  默认值
+:----------: | -------  |  :-------:  |  :-------:
+dialog-data | 选择显示字段数组 格式如下 [{ name: '我的', // 字段名 state: true, // 选择状态 disabled: true // 是否禁用 }] | Array  | []
+show-amend  | 是否显示修改字段名按钮 | Boolean | false
+field-title  | 弹框的标题 | String |选择显示字段
+amend-btn-icon  | 修改字段名按钮的图标字体 (必须是iconfont字体) | String | 'el-icon-edit'
+field-sort | 显示字段是否排序 |  Boolean | true
+
+
+# Field Events（操作（显示字段）的事件）
+
+事件名  |  说明  |  参数
+:----------: | -------  |  :-------:
+@amend-field  | 修改单个字段按钮点击事件 |  row, index
+@show-field  | 确认按钮点击事件,获取当前的需要显示的字段 |  当前的字段数组
+@reset  | 重置按钮点击事件 |  当前的字段数组
+
+# Field Methods（操作（显示字段）的方法）
+
+方法名  |  说明  |  参数
+:----------: | -------  |  :-------:
+plDialogOpens | 打开弹窗 | -
+
+
+
+你加了分页 我里面会延迟去设置高度，因为我要计算分页的高度，此时分页还没出来 我得mounted后去计算，所以你在mounted去计算高度 是有问题的     你可以不是呀分页组件就没问题了
+，使用分页组件  请 settimeout下再去设置高度
+  mounted () {
+        // 不使用分页
+        this.height = window.innerHeight - 50
+        // 使用分页你得这样去计算高度
+        setTimeout(() => {
+            this.height = window.innerHeight - 50
+        })
+    },

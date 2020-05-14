@@ -1,0 +1,6 @@
+{
+  "pl-table-column": "./packages/pl-table-column/index.js",
+  "pl-table": "./packages/pl-table/index.js",
+  "plx-table-grid": "./packages/plx-table-grid/index.js",
+  "plx-table-column": "./packages/plx-table-column/index.js"
+}
