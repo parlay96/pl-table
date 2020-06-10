@@ -135,9 +135,9 @@
          </pl-table>
      </div>
 
-      <!--我是pl-table大树形表格 必须指定 row-key  必须开启use-virtual-->
+      <!--我是pl-table大数据树形表格 必须指定 row-key  必须开启use-virtual-->
      <div v-if="true">
-          <p style="color: red;">我是pl-table大树形表格 必须指定 row-key  必须开启use-virtual</p>
+          <p style="color: red;">我是pl-table大数据树形表格 必须指定 row-key  必须开启use-virtual</p>
           <el-button @click="$refs.plTreeTable.toggleTreeExpansion(treeData[0])">切换第一个</el-button>
           <el-button @click="$refs.plTreeTable.setTreeExpansion(treeData[2], true)">展开第三个</el-button>
           <el-button @click="$refs.plTreeTable.setAllTreeExpansion()">展开全部</el-button>
@@ -176,7 +176,10 @@
 </template>
 
 <script>
-  // （最大数量500）当前你可以更多，那么只会导致你渲染时间多，卡
+  // （最大数量500）当然你可以更多，那么只会导致你遍历时间多，页面等待时间长，（并非渲染节点时间长）
+  // 另外 就以下的这个层级，总数据量展开后，就是 500 + 500 x 3 + 3 x 1 = 2003 的总数据量
+  // 如果你 第一级是500 第二级也是500 第三级是10， 那么你的数据量就是 500 + 500 x 500 + 500 x 10的总数据量，这是非常吓人的
+  // 所以结合自己情况去给树数据，树节点  避免不鸟去递归，如果你的数据量很大很大，那么你会死在遍历上。
   var dataList = Array.from({ length: 500 }, (_, idx) => ({
       id: idx + '_' + 1,
       date: '2016-05-03',
@@ -252,6 +255,7 @@
         },
         // 合计
        summaryMethod ({ columns, data }) {
+         // 平均值算法（不需要自己去掉）
           function cacl(arr, callback) {
               let ret;
               for (let i=0; i<arr.length;i++) {
@@ -259,6 +263,7 @@
               }
               return ret;
           }
+          // 平均值算法（不需要自己去掉）
           Array.prototype.sum = function () {
               return cacl(this, function (item, sum) {
                   if (typeof (sum) == 'undefined') {
@@ -269,6 +274,7 @@
                   }
               });
           };
+           // 平均值算法（不需要自己去掉）
           Array.prototype.avg = function () {
               if (this.length == 0) {
                   return 0;
