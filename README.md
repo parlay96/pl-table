@@ -22,6 +22,12 @@
 
 [点击查看pl-table在线demo效果](https://livelypeng.github.io/pl-table/website-project/dist/index.html)
 
+## 友情链接
+
+#### - [uView 文档（超棒的移动跨端框架，文档详细，上手容易）](https://uviewui.com/)
+
+#### - [uView 开源地址（uView UI，是 uni-app 生态优秀的 UI 框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水）](https://github.com/YanxinNet/uView)
+
 # 安装方式 and 引入方式
   ** npm方式安装 **
 ``` javascript
