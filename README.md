@@ -32,6 +32,8 @@
 
 #### **vue-admin-beautiful** —— [在线演示](http://beautiful.panm.cn/vue-admin-beautiful/#/index)
 
+#### - [✨Element UI 表单设计及代码生成器（可视化表单设计器，一键生成 element 表单）](https://github.com/JakHuang/form-generator)
+
 # 安装方式 and 引入方式
   ** npm方式安装 **
 ``` javascript
