@@ -85,6 +85,7 @@
    1. pl-table不使用use-virtual属性，整个表格功能性的东西都是element表格，除了样式
    2. pl-table 开启use-virtual虚拟可以支持微小的合并行|列 如2列 2行，支持多级头
    3. plx-table-grid同时虚拟不支持合并行|列，不支持多级头，非必要不推荐使用X + Y同时虚拟
+   4. pl-table开启use-virtual不支持展开行
 
 # pl-table表格的API
   https://github.com/livelyPeng/pl-table/wiki/pl-table-api
