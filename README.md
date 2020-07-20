@@ -8,7 +8,7 @@
 
 > [umy-ui代码库，如何您是pl-table的使用者，感谢您点击这个，去点个Star吧](https://github.com/u-leo/umy-ui)
 
-> 不在建议您继续使用pl-table了，如果您是因为之前项目用了pl-table导致很难改变成新的umy-ui，那么您继续使用pl-table2.7.5稳定版。 如果您想使用最新功能，那么请你关注umy-ui吧！
+> 不在建议您继续使用pl-table了，如果您是因为之前项目用了pl-table导致很难改变成新的umy-ui，那么您继续使用pl-table2.7.5稳定版。 如果您想使用最新功能，那么请您关注umy-ui吧！
 
 > （更多问题请加入pl-table交流群吧）感谢点击上方的Star！！！
 
