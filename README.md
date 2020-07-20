@@ -1,26 +1,23 @@
 # pl-table  最新版本: "version": "2.7.5"
-> 最新: pl-table大数据树表格的到来
 
-> 重点: 一个表格插件（完美解决万级数据渲染卡顿问题），过万数据点击全选卡顿，等等问题
+> 最新通知: pl-table不在更新维护，感谢您一直以来的关注，pl-table被移植到了umy-ui组件库中。当然如果您想继续使用pl-table2.7.5版本，那么您就继续使用，不影响您。
 
-> 重点： pl-table基于element-ui，在此感谢element-ui全体作者
+> pl-table被移植到了U米-ui库中，如果您想使用未来的table呢，您可以点击下面链接
 
-> 重点:  流畅渲染万级数据并不会影响到 element-ui el-table组件的(原有)功能，并且新增了一些功能，具体请看属性配置
+> [umy-ui官网](https://u-leo.github.io/umy-ui/docs/index.html)
 
-> 重点: 基于element-ui但是不代表你需要安装element-ui才能使用pl-table，你可以不安装任何UI库，就可以使用pl-table。但是必须在集成vue框架下使用！
+> [umy-ui代码库，如何您是pl-table的使用者，感谢您点击这个，去点个Star吧](https://github.com/u-leo/umy-ui)
 
-> 注: 看表格实例效果代码去看element Table 表格效果代码（比如你不知道怎么合并列，合计,多级表头，怎么写请你去看element表格）
+> 不在建议您继续使用pl-table了，如果您是因为之前项目用了pl-table导致很难改变成新的umy-ui，那么您继续使用pl-table2.7.5稳定版。 如果您想使用最新功能，那么请你关注umy-ui吧！
 
-> 注: 有了表格,怎么导出表格数据为excel并且带样式呢?,请点击https://github.com/livelyPeng/pl-export-excel
-
-> 注:  关于项目中使用pl-table打包后文件体积大，如何优化问题，请加下面群了解！
-
-> author: pl （更多问题请加入pl-table交流群吧）感谢点击上方的Star！！！
+> （更多问题请加入pl-table交流群吧）感谢点击上方的Star！！！
 
 > QQ交流1群: 675286117已满员
 > QQ交流2群: 939125115新群未满员
 
+
 [点击查看pl-table在线demo效果](https://livelypeng.github.io/pl-table/website-project/dist/index.html)
+
 
 ## 友情链接
 
@@ -126,23 +123,4 @@
 
 # 当前版本BUG（等着下个版本修改）
  暂未发现
-
-# 提示注意点 编辑型表格
-``` javascript
-Simple love 10:20:16
- 表格是编辑型表格，就是那种单元格全是输入框，下拉框，时间选择等的element组件或者标签或者其他UI库组件。对于编辑型表格，不要一次性加载出来
-
-Simple love 10:20:41
-麻烦去搞懂下为啥卡的原理
-
-Simple love 10:21:14
-如果你是20列，加上需要滚动的行算10行吧  如果每个单元格是一个输入框  下拉框组件  那么你使用的组件里面还有节点，你使用一个下拉框啥的组件，自己去看看有多少节点元素吧。   自己想想  你这一屏 多少节点
-
-Simple love 10:21:29
-那么程序需要去渲染你这样的节点 需要时间不
-
-Simple love 10:23:02
-
-你不能让用户点击行（或者点击操作区域的 “ 编辑按钮”） 去渲染当前行，为编辑型表格？ 不能从产品上去解决？  就是不要让它一出来就是全部渲染输入框 编辑型表格
-```
 
