@@ -1,10 +1,16 @@
-# pl-table  不在更新维护, 你可以使用umy-ui，这里面包含了pl-table的所有功能。它一样解决表格卡的情况！
+# pl-table  不在更新维护, pl-table  不在更新维护， pl-table  不在更新维护，你可以使用umy-ui，这里面包含了pl-table的所有功能。它一样解决表格卡的情况！请点击下面链接
 
 > 最新通知: pl-table不在更新维护，感谢您一直以来的关注，pl-table被移植到了umy-ui组件库中。当然如果您想继续使用pl-table2.7.5版本，那么您就继续使用，不影响您。
 
 > pl-table被移植到了U米-ui库中，如果您想使用未来的table呢，您可以点击下面链接
 
 > 不在建议您继续使用pl-table了，如果您是因为之前项目用了pl-table导致很难改变成新的umy-ui，那么您继续使用pl-table2.7.5稳定版。 如果您想使用最新功能，那么请您关注umy-ui吧！
+
+> 下面的文档，官网可能进入慢，点击页面卡是正常的，因为我们把官网放在github上，加载比较慢。后续买个服务器部署下就好了哈！！
+
+> [umy-ui官网](https://u-leo.github.io/umy-ui/docs/index.html)
+
+> [umy-ui官网](https://u-leo.github.io/umy-ui/docs/index.html)
 
 > [umy-ui官网](https://u-leo.github.io/umy-ui/docs/index.html)
 
@@ -13,10 +19,8 @@
 > （更多问题请加入pl-table交流群吧）感谢点击上方的Star！！！
 
 > QQ交流1群: 675286117已满员
+
 > QQ交流2群: 939125115新群未满员
-
-
-[点击查看pl-table在线demo效果](https://livelypeng.github.io/pl-table/website-project/dist/index.html)
 
 
 ## 友情链接
