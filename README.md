@@ -6,13 +6,11 @@
 
 > 不在建议您继续使用pl-table了，如果您是因为之前项目用了pl-table导致很难改变成新的umy-ui，那么您继续使用pl-table2.7.5稳定版。 如果您想使用最新功能，那么请您关注umy-ui吧！
 
-> 下面的文档，官网可能进入慢，点击页面卡是正常的，因为我们把官网放在github上，加载比较慢。后续买个服务器部署下就好了哈！！
+> 文档，官网可能进入慢，因为我们带宽小，加载慢！
 
-> [umy-ui官网](https://u-leo.github.io/umy-ui/docs/index.html)
+> [umy-ui官网](http://umyui.com/#/wel/index)
 
-> [umy-ui官网](https://u-leo.github.io/umy-ui/docs/index.html)
-
-> [umy-ui官网](https://u-leo.github.io/umy-ui/docs/index.html)
+> [umy-ui文档](http://umyui.com/#/wel/index)
 
 > [umy-ui代码库，如何您是pl-table的使用者，感谢您点击这个，去点个Star吧](https://github.com/u-leo/umy-ui)
 
