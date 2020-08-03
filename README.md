@@ -8,9 +8,9 @@
 
 > 文档，官网可能进入慢，因为我们带宽小，加载慢！
 
-> [umy-ui官网](http://umyui.com/#/wel/index)
+> [umy-ui官网](http://129.211.13.167/#/wel/index)
 
-> [umy-ui文档](http://umyui.com/#/wel/index)
+> [umy-ui文档](http://129.211.13.167/#/wel/index)
 
 > [umy-ui代码库，如何您是pl-table的使用者，感谢您点击这个，去点个Star吧](https://github.com/u-leo/umy-ui)
 
