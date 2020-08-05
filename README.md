@@ -1,4 +1,4 @@
-# pl-table  不在更新维护, pl-table  不在更新维护， pl-table  不在更新维护，你可以使用umy-ui，这里面包含了pl-table的所有功能。它一样解决表格卡的情况！请点击下面链接
+# pl-table  不在更新维护, 你可以使用umy-ui，这里面包含了pl-table的所有功能。只是把pl-table移动到umy-ui库里面去了，umy-ui它一样解决表格卡的情况！请点击下面链接
 
 > 最新通知: pl-table不在更新维护，感谢您一直以来的关注，pl-table被移植到了umy-ui组件库中。当然如果您想继续使用pl-table2.7.5版本，那么您就继续使用，不影响您。
 
