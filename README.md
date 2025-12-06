@@ -1,6 +1,6 @@
 # pl-table  不在更新维护, 你可以使用umy-ui，这里面包含了pl-table的所有功能。只是把pl-table移动到umy-ui库里面去了，umy-ui它一样解决表格卡的情况！请点击下面链接
 
-> [umy-ui官网](http://www.umyui.com/)
+> [官网](http://43.136.119.145/)
 
 > [umy-ui代码库，如何您是pl-table的使用者，感谢您点击这个，去点个Star吧](https://github.com/u-leo/umy-ui)
 
